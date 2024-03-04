@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_customer_home">
+
+    <fragment
+        android:id="@+id/nav_customer_home"
+        android:name="com.tindo.carshareapp.ui.customer.home.CustomerHomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_customer_home" />
+
+    <fragment
+        android:id="@+id/nav_driver_home"
+        android:name="com.tindo.carshareapp.ui.driver.home.DriverHomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_driver_home" />
+
+    <fragment
+        android:id="@+id/nav_customer_booking"
+        android:name="com.tindo.carshareapp.ui.customer.booking.BookingFragment"
+        android:label="Booking"
+        tools:layout="@layout/fragment_customer_booking" />
+
+    <fragment
+        android:id="@+id/nav_driver_booking"
+        android:name="com.tindo.carshareapp.ui.driver.process_booking.DriverProcessBookingFragment"
+        android:label="Booking"
+        tools:layout="@layout/fragment_driver_recieve_booking" />
+
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.tindo.carshareapp.ui.user_profile.UserProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_user_profile" />
+</navigation>

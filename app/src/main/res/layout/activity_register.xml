@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".activities.RegisterActivity">
+
+    <Button
+        android:id="@+id/registerBackBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:backgroundTint="#2AC7FE"
+        android:text="Back"
+        android:textColor="#11cc04"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.205">
+
+        <EditText
+            android:id="@+id/registerUsernameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20sp"
+            android:background="#FFFFFF"
+            android:ems="10"
+            android:hint="Name"
+            android:padding="10dp" />
+
+
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:id="@+id/roleGroup">
+
+            <RadioButton
+                android:id="@+id/registerCustomerRadioBtn"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="#11cc04"
+                android:checked="true"
+                android:text="@string/customer" />
+
+            <RadioButton
+                android:id="@+id/registerDriverRadioBtn"
+                android:layout_width="150dp"
+                android:textColor="#11cc04"
+                android:layout_height="match_parent"
+                android:text="@string/driver" />
+
+        </RadioGroup>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:id="@+id/transportationTypeGroup"
+            android:visibility="invisible">
+
+            <RadioButton
+                android:id="@+id/registerCarRadioBtn"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:textColor="@color/sky_blue"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="@string/cars" />
+
+            <RadioButton
+                android:id="@+id/registerBikeRadioBtn"
+                android:layout_width="150dp"
+                android:textColor="@color/sky_blue"
+                android:layout_height="match_parent"
+                android:text="@string/bikes" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/registerVehiclePlateNumberEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10sp"
+            android:background="#FFFFFF"
+            android:ems="10"
+            android:hint="Vehicle plate number"
+            android:padding="10sp"
+            android:textColor="@color/sky_blue"
+            android:enabled="true"
+            android:visibility="invisible"
+            />
+
+        <Button
+            android:id="@+id/registerFinalRegisterBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:backgroundTint="#11cc04"
+            android:padding="10dp"
+            android:text="Next"
+            android:textColor="#11cc04"
+            android:textSize="18sp" />
+
+
+
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="138dp"
+            app:adSize="BANNER"
+            app:adUnitId="ca-app-pub-6221472085805950/5721989210"></com.google.android.gms.ads.AdView>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

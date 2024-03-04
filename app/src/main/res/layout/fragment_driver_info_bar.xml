@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--    android:background="@drawable/rounded_layout"-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:padding="5dp"
+    android:background="@color/light_yellow"
+    android:clickable="true"
+    android:orientation="vertical"
+    tools:context=".ui.customer.booking.driver_info_bar.DriverInfoBarFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/nearby_driver"
+            android:textAlignment="center"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/plateNumberTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/black"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="56H7-01234"
+            android:textAlignment="center"
+            android:textColor="@color/quantum_white_text"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/transportationTypeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Honda - AirBlade"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/avatar_card_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:layout_gravity="center"
+            android:innerRadius="0dp"
+            android:shape="oval"
+            app:cardCornerRadius="90dp"
+            app:cardElevation="90dp">
+
+            <ImageView
+                android:id="@+id/profile_avatar"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/quantum_grey300"
+                android:src="@drawable/ic_person" />
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_weight="4"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/driverUsernameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/Nom"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+            <RatingBar
+                android:id="@+id/score_rating_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:rating="3.5"
+                android:stepSize=".1"
+                style="@android:style/Widget.DeviceDefault.Light.RatingBar.Indicator"
+                android:progressTint="@color/dusk_yellow"/>
+        </LinearLayout>
+        <ImageButton
+            android:id="@+id/call_to_driver_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="fill"
+            android:layout_weight="1"
+            android:background="@drawable/ic_baseline_call_24" />
+
+        <ImageButton
+            android:id="@+id/message_to_driver_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/ic_baseline_message_24" />
+    </LinearLayout>
+
+</LinearLayout>
